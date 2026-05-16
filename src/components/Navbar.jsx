@@ -7,6 +7,7 @@ const navLinks = [
   { label: 'Beranda', path: '/' },
   { label: 'Tentang Kami', path: '/tentang' },
   { label: 'Layanan', path: '/layanan' },
+  { label: 'Portfolio', path: '/portfolio' },
   { label: 'Kontak', path: '/kontak' },
 ];
 
@@ -35,13 +36,7 @@ export default function Navbar() {
       <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
         <div className="navbar__inner container">
           <Link to="/" className="navbar__logo">
-            <div className="navbar__logo-mark">
-              <span>KFG</span>
-            </div>
-            <div className="navbar__logo-text">
-              <span className="navbar__logo-name">Khincai</span>
-              <span className="navbar__logo-sub">Favorit Group</span>
-            </div>
+            <img src="/logo.jpeg" alt="Khincai Favorit Group" className="navbar__logo-image" />
           </Link>
 
           <ul className="navbar__links">

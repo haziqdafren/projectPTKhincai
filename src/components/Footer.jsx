@@ -24,13 +24,7 @@ export default function Footer() {
         <div className="footer__main">
           {/* Brand */}
           <div className="footer__brand">
-            <div className="footer__logo">
-              <div className="footer__logo-mark"><span>KFG</span></div>
-              <div className="footer__logo-text">
-                <span className="footer__logo-name">Khincai</span>
-                <span className="footer__logo-sub">Favorit Group</span>
-              </div>
-            </div>
+            <img src="/logo.jpeg" alt="Khincai Favorit Group" className="footer__logo-image" />
             <p className="footer__tagline">
               Mitra terpercaya pemerintah dalam mewujudkan proyek konstruksi berkualitas di seluruh nusantara.
             </p>
@@ -73,7 +67,7 @@ export default function Footer() {
             </div>
             <div className="footer__contact-item">
               <span className="footer__contact-label">Email</span>
-              <span className="footer__contact-value">info@khincaifavorit.co.id</span>
+              <span className="footer__contact-value">ptkhincaifavoritgroup@gmail.com</span>
             </div>
           </div>
         </div>

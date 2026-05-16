@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Target, Eye, CheckCircle2, Award, Users, Clock } from 'lucide-react';
+import { ArrowRight, Target, Eye, CheckCircle2, Award, Users, Clock, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
 import './About.css';
 
 const fadeUp = {
@@ -18,11 +19,11 @@ const values = [
 ];
 
 const milestones = [
-  { year: '2012', title: 'Perusahaan Didirikan', desc: 'PT Khincai Favorit Group resmi berdiri dengan fokus pada proyek konstruksi lokal.' },
-  { year: '2015', title: 'Ekspansi Regional', desc: 'Memperluas jangkauan operasional ke seluruh wilayah dengan tim yang berkembang.' },
-  { year: '2018', title: 'Kemitraan Pemerintah', desc: 'Berhasil mendapatkan kualifikasi kontraktor pemerintah dan memenangkan tender pertama.' },
-  { year: '2021', title: 'Sertifikasi ISO', desc: 'Meraih sertifikasi ISO 9001:2015 sebagai bukti komitmen terhadap sistem manajemen mutu.' },
-  { year: '2024', title: 'Proyek Strategis Nasional', desc: 'Terlibat dalam proyek infrastruktur strategis nasional berskala besar.' },
+  { year: '2025', title: 'Perusahaan Didirikan', desc: 'PT Khincai Favorit Group resmi berdiri dengan komitmen menjadi mitra terpercaya dalam konstruksi, penyediaan material, dan pengembangan real estate.' },
+  { year: '2025', title: 'Perolehan NIB', desc: 'Berhasil mendapatkan Nomor Induk Berusaha (NIB) sebagai legalitas resmi operasional perusahaan.' },
+  { year: '2025', title: 'Proyek Plantation', desc: 'Menjalankan proyek full package plantation di PT Sumatera Riang Lestari Estate Bayas dengan standar profesional tertinggi.' },
+  { year: '2025-2026', title: 'Ekspansi Layanan', desc: 'Mengembangkan layanan terintegrasi meliputi konstruksi, leveransi, penyediaan material, land clearing, dan real estate.' },
+  { year: 'Masa Depan', title: 'Target Pemerintah', desc: 'Fokus pada pengerjaan tender pemerintah (APBN/APBD) dan kemitraan strategis dengan instansi publik.' },
 ];
 
 const team = [
@@ -33,6 +34,19 @@ const team = [
 ];
 
 export default function About() {
+  const [showNibModal, setShowNibModal] = useState(false);
+
+  useEffect(() => {
+    const handleEscKey = (e) => {
+      if (e.key === 'Escape' && showNibModal) {
+        setShowNibModal(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleEscKey);
+    return () => window.removeEventListener('keydown', handleEscKey);
+  }, [showNibModal]);
+
   return (
     <main>
       {/* ── PAGE HERO ── */}
@@ -46,10 +60,10 @@ export default function About() {
             >
               <span className="section-label">Tentang Kami</span>
               <h1 className="page-hero__heading">
-                Membangun Kepercayaan<br /><em>Sejak 2012</em>
+                Membangun Kepercayaan<br /><em>Sejak 2025</em>
               </h1>
               <p className="page-hero__sub">
-                Lebih dari satu dekade pengalaman membangun infrastruktur Indonesia dengan standar kualitas tertinggi dan komitmen penuh kepada setiap klien.
+                PT Khincai Favorit Group hadir sebagai mitra profesional dalam konstruksi, penyediaan material, dan pengembangan real estate dengan standar kualitas tertinggi.
               </p>
             </motion.div>
           </div>
@@ -58,7 +72,7 @@ export default function About() {
         <div className="page-hero__divider" />
 
         <div className="page-hero__right">
-          <div className="page-hero__est">2012</div>
+          <div className="page-hero__est">2025</div>
           <div className="page-hero__est-label">Tahun Berdiri</div>
         </div>
       </section>
@@ -173,6 +187,33 @@ export default function About() {
         </div>
       </section>
 
+      {/* ── LEGALITY & CERTIFICATIONS ── */}
+      <section className="legality-section">
+        <div className="container">
+          <motion.div className="legality-header" {...fadeUp}>
+            <span className="section-label">Legalitas & Sertifikasi</span>
+            <h2>Kredibilitas Terjamin<br />dengan Dokumen Resmi</h2>
+            <p>PT Khincai Favorit Group memiliki legalitas penuh dan komitmen terhadap standar industri yang ketat.</p>
+          </motion.div>
+          <div className="legality-grid">
+            <motion.div
+              className="legality-card"
+              {...fadeUp}
+              transition={{ delay: 0.1 }}
+            >
+              <div className="legality-card__content">
+                <div className="legality-card__icon">Dokumen</div>
+                <h3>NIB (Nomor Induk Berusaha)</h3>
+                <p>Legalitas resmi operasional perusahaan terdaftar di sistem OSS Kementerian Hukum dan HAM</p>
+                <button className="btn-primary" onClick={() => setShowNibModal(true)}>
+                  Lihat Dokumen <ArrowRight size={16} />
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA ── */}
       <section className="about-cta">
         <motion.div className="about-cta__inner container" {...fadeUp}>
@@ -183,6 +224,24 @@ export default function About() {
           </Link>
         </motion.div>
       </section>
+
+      {/* ── NIB Modal ── */}
+      {showNibModal && (
+        <div className="modal-overlay" onClick={() => setShowNibModal(false)}>
+          <motion.div
+            className="modal-content"
+            onClick={(e) => e.stopPropagation()}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3 }}
+          >
+            <button className="modal-close" onClick={() => setShowNibModal(false)}>
+              <X size={24} />
+            </button>
+            <img src="/NIB.jpeg" alt="NIB Certification - Full View" />
+          </motion.div>
+        </div>
+      )}
     </main>
   );
 }

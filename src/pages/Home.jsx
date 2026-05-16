@@ -11,28 +11,27 @@ const fadeUp = {
 };
 
 const stats = [
-  { value: '50+', label: 'Proyek Selesai' },
-  { value: '12+', label: 'Tahun Pengalaman' },
-  { value: '30+', label: 'Klien Terpercaya' },
-  { value: '15+', label: 'Mitra Pemerintah' },
+  { value: '1+', label: 'Proyek Selesai' },
+  { value: '1', label: 'Tahun Operasional' },
+  { value: '2025', label: 'Tahun Berdiri' },
+  { value: '3', label: 'Bidang Usaha' },
 ];
 
 const services = [
-  { icon: <Building2 size={28} />, title: 'Konstruksi Gedung', desc: 'Pembangunan gedung komersial, perkantoran, dan fasilitas publik dengan standar kualitas tinggi.' },
-  { icon: <Hammer size={28} />, title: 'Infrastruktur Jalan', desc: 'Pengerjaan jalan raya, jembatan, dan infrastruktur transportasi skala nasional.' },
-  { icon: <Landmark size={28} />, title: 'Proyek Pemerintah', desc: 'Spesialis tender dan pengerjaan proyek pemerintah pusat dan daerah di seluruh Indonesia.' },
-  { icon: <HardHat size={28} />, title: 'Renovasi & Rehabilitasi', desc: 'Pembaruan bangunan lama dan fasilitas publik dengan pendekatan modern dan efisien.' },
-  { icon: <Shield size={28} />, title: 'Konsultasi Teknik', desc: 'Layanan konsultasi perencanaan, desain, dan manajemen konstruksi profesional.' },
-  { icon: <TrendingUp size={28} />, title: 'Pengadaan Barang', desc: 'Penyediaan material dan peralatan konstruksi berkualitas untuk kebutuhan proyek skala besar.' },
+  { icon: <Building2 size={28} />, title: 'Kontraktor', desc: 'Layanan kontraktor profesional untuk berbagai jenis proyek konstruksi dan pembangunan.' },
+  { icon: <Hammer size={28} />, title: 'Leveransir', desc: 'Penyediaan barang dan material berkualitas untuk mendukung kelancaran proyek Anda.' },
+  { icon: <Landmark size={28} />, title: 'Supplay', desc: 'Jasa penyuplai material dan peralatan konstruksi dengan harga kompetitif dan kualitas terjamin.' },
+  { icon: <HardHat size={28} />, title: 'Land Clearing', desc: 'Pembersihan dan persiapan lahan untuk proyek konstruksi dan pengembangan properti.' },
+  { icon: <Shield size={28} />, title: 'Real Estate', desc: 'Pengembangan properti dan real estate dengan standar kualitas dan desain profesional.' },
 ];
 
 const whyUs = [
-  'Pengalaman lebih dari 12 tahun di industri konstruksi',
-  'Tim ahli bersertifikasi nasional dan internasional',
-  'Rekam jejak proyek pemerintah yang solid',
-  'Standar keselamatan kerja K3 yang ketat',
-  'Sistem manajemen mutu ISO 9001',
-  'Tepat waktu dan efisien dalam setiap proyek',
+  'Memiliki legalitas resmi dengan NIB terdaftar',
+  'Tim profesional dan berpengalaman di bidangnya',
+  'Siap melayani klien dari berbagai sektor',
+  'Komitmen terhadap kualitas dan kepuasan klien',
+  'Pengalaman dalam proyek full package plantation',
+  'Transparansi dan akuntabilitas dalam setiap transaksi',
 ];
 
 const certs = ['SIUJK Nasional', 'ISO 9001:2015', 'Standar K3', 'LPJK Terverifikasi', 'e-Katalog LKPP', 'BUMN Partner'];
@@ -45,7 +44,7 @@ export default function Home() {
         <div className="hero__left">
           <div className="hero__left-inner container">
             <motion.div {...fadeUp}>
-              <span className="section-label">Kontraktor &amp; Konstruksi Profesional</span>
+              <span className="section-label">Kontraktor, Leveransir, Supplay &amp; Real Estate</span>
             </motion.div>
             <motion.h1
               className="hero__heading"
@@ -53,9 +52,9 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
             >
-              Membangun<br />
-              <em>Infrastruktur</em><br />
-              Indonesia
+              Solusi Bisnis<br />
+              <em>Terpercaya</em><br />
+              Untuk Anda
             </motion.h1>
             <motion.p
               className="hero__sub"
@@ -63,7 +62,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.25 }}
             >
-              PT Khincai Favorit Group hadir sebagai mitra terpercaya pemerintah dalam mewujudkan proyek konstruksi berkualitas — dari gedung, jalan, hingga fasilitas publik di seluruh nusantara.
+              PT Khincai Favorit Group menyediakan layanan lengkap meliputi kontraktor, leveransir, supplay, land clearing, dan real estate untuk memenuhi kebutuhan bisnis Anda.
             </motion.p>
             <motion.div
               className="hero__actions"
@@ -97,7 +96,7 @@ export default function Home() {
               {i < stats.length - 1 && <div className="hero__stat-divider" style={{ marginTop: '1.5rem' }} />}
             </motion.div>
           ))}
-          <div className="hero__brand-vertical">PT Khincai Favorit Group · Est. 2012</div>
+          <div className="hero__brand-vertical">PT Khincai Favorit Group · Est. 2025</div>
         </div>
       </section>
 
@@ -117,10 +116,10 @@ export default function Home() {
           <motion.div {...fadeUp}>
             <span className="section-label">Tentang Perusahaan</span>
             <h2 className="about-strip__heading">
-              Dipercaya Pemerintah,<br /><em>Terbukti</em> di Lapangan
+              Mitra Bisnis<br /><em>Terpercaya</em> Untuk Semua
             </h2>
             <p className="about-strip__body">
-              PT Khincai Favorit Group adalah perusahaan kontraktor yang berpengalaman dalam mengerjakan proyek-proyek strategis nasional. Kami berkomitmen untuk mendukung pembangunan Indonesia melalui kemitraan yang transparan, akuntabel, dan profesional.
+              PT Khincai Favorit Group adalah perusahaan profesional yang menyediakan layanan kontraktor, leveransir, supplay, land clearing, dan real estate. Kami berkomitmen untuk memberikan solusi bisnis berkualitas dengan standar profesional tertinggi.
             </p>
             <ul className="about-strip__list">
               {whyUs.map((item, i) => (
@@ -142,13 +141,13 @@ export default function Home() {
           >
             <div className="about-strip__card">
               <div className="about-strip__card-icon"><Award size={28} /></div>
-              <h3>Kontraktor Grade B</h3>
-              <p>Kualifikasi resmi untuk mengerjakan proyek pemerintah skala menengah hingga besar.</p>
+              <h3>Legalitas Terjamin</h3>
+              <p>Memiliki NIB resmi sebagai bukti operasional perusahaan yang sah dan terpercaya.</p>
             </div>
             <div className="about-strip__card">
               <div className="about-strip__card-icon"><Users size={28} /></div>
               <h3>Tim Profesional</h3>
-              <p>Didukung tenaga ahli bersertifikasi dengan pengalaman lapangan bertahun-tahun.</p>
+              <p>Dipimpin oleh profesional berpengalaman dan berdedikasi dalam setiap aspek bisnis.</p>
             </div>
           </motion.div>
         </div>

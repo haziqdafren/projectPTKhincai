@@ -12,14 +12,11 @@ const fadeUp = {
 };
 
 const services = [
-  { icon: <Building2 size={32} />, number: '01', title: 'Konstruksi Gedung', desc: 'Pembangunan gedung komersial, perkantoran, fasilitas kesehatan, dan bangunan publik lainnya menggunakan teknologi konstruksi modern dengan standar kualitas internasional.', features: ['Gedung Perkantoran', 'Fasilitas Kesehatan', 'Gedung Pendidikan', 'Pusat Perbelanjaan'] },
-  { icon: <Hammer size={32} />, number: '02', title: 'Infrastruktur Jalan & Jembatan', desc: 'Pengerjaan jalan raya, jalan tol, jembatan, dan infrastruktur transportasi dengan kapasitas teknis dan peralatan berat yang memadai.', features: ['Jalan Nasional', 'Jembatan & Flyover', 'Drainase Kota', 'Jalan Lingkungan'] },
-  { icon: <Landmark size={32} />, number: '03', title: 'Proyek Tender Pemerintah', desc: 'Spesialis dalam proses pengadaan dan pelaksanaan tender pemerintah pusat dan daerah, dengan rekam jejak yang terbukti dan sistem administrasi yang akuntabel.', features: ['Tender APBN', 'Tender APBD', 'Proyek DAK', 'e-Katalog LKPP'] },
-  { icon: <HardHat size={32} />, number: '04', title: 'Renovasi & Rehabilitasi', desc: 'Pembaruan dan rehabilitasi gedung, fasilitas publik, serta infrastruktur yang sudah ada dengan pendekatan yang meminimalkan gangguan operasional.', features: ['Renovasi Gedung', 'Perbaikan Jalan', 'Rehabilitasi Sekolah', 'Revitalisasi Pasar'] },
-  { icon: <ClipboardList size={32} />, number: '05', title: 'Konsultasi & Manajemen Proyek', desc: 'Layanan konsultasi teknik, perencanaan desain, dan manajemen konstruksi profesional untuk memastikan setiap proyek berjalan efisien.', features: ['Perencanaan Teknik', 'Pengawasan Proyek', 'Studi Kelayakan', 'Audit Teknis'] },
-  { icon: <TrendingUp size={32} />, number: '06', title: 'Pengadaan Barang & Material', desc: 'Penyediaan material konstruksi berkualitas, peralatan berat, dan logistik proyek dengan jaringan pemasok yang luas dan harga yang kompetitif.', features: ['Material Bangunan', 'Sewa Alat Berat', 'Logistik Proyek', 'Konsorsium Pengadaan'] },
-  { icon: <Shield size={32} />, number: '07', title: 'Keselamatan & Lingkungan', desc: 'Penerapan sistem manajemen keselamatan kerja K3 dan AMDAL yang ketat di setiap proyek untuk menjamin keamanan pekerja dan kelestarian lingkungan.', features: ['Audit K3', 'AMDAL', 'Pelatihan Safety', 'SOP Lingkungan'] },
-  { icon: <Wrench size={32} />, number: '08', title: 'Mekanikal & Elektrikal', desc: 'Pengerjaan sistem mekanikal, elektrikal, dan plumbing (MEP) untuk gedung dan fasilitas industri dengan teknisi bersertifikasi.', features: ['Instalasi Listrik', 'Sistem HVAC', 'Plumbing', 'Fire Protection'] },
+  { icon: <Building2 size={32} />, number: '01', title: 'Kontraktor', desc: 'Layanan kontraktor profesional untuk berbagai jenis proyek konstruksi dan pembangunan. Kami menangani proyek dengan standar kualitas tinggi dan tepat waktu.', features: ['Proyek Konstruksi', 'Proyek Pembangunan', 'Manajemen Proyek', 'Supervisi Lapangan'] },
+  { icon: <Hammer size={32} />, number: '02', title: 'Leveransir', desc: 'Penyediaan barang dan material berkualitas untuk mendukung kelancaran proyek Anda. Kami menjamin kualitas dan ketepatan pengiriman setiap waktu.', features: ['Penyediaan Barang', 'Material Berkualitas', 'Pengiriman Tepat Waktu', 'Jaringan Distributor'] },
+  { icon: <Landmark size={32} />, number: '03', title: 'Supplay', desc: 'Jasa penyuplai material dan peralatan konstruksi dengan harga kompetitif dan kualitas terjamin. Kami melayani kebutuhan skala kecil hingga besar.', features: ['Material Konstruksi', 'Peralatan Berat', 'Logistik & Distribusi', 'Harga Kompetitif'] },
+  { icon: <HardHat size={32} />, number: '04', title: 'Land Clearing', desc: 'Pembersihan dan persiapan lahan untuk proyek konstruksi dan pengembangan properti. Layanan profesional dengan peralatan modern dan berpengalaman.', features: ['Pembersihan Lahan', 'Persiapan Lahan', 'Pengolahan Tanah', 'Manajemen Limbah'] },
+  { icon: <Shield size={32} />, number: '05', title: 'Real Estate', desc: 'Pengembangan properti dan real estate dengan standar kualitas dan desain profesional. Kami menawarkan solusi pengembangan properti yang menguntungkan.', features: ['Pengembangan Properti', 'Manajemen Real Estate', 'Investasi Properti', 'Konsultasi Properti'] },
 ];
 
 const process = [
@@ -45,18 +42,18 @@ export default function Services() {
             >
               <span className="section-label">Layanan Kami</span>
               <h1 className="page-hero__heading">
-                Solusi Konstruksi<br /><em>Menyeluruh</em>
+                Solusi Bisnis<br /><em>Lengkap</em> &amp; Terintegrasi
               </h1>
               <p className="page-hero__sub">
-                Dari perencanaan hingga serah terima, kami menyediakan layanan konstruksi terintegrasi untuk memenuhi setiap kebutuhan proyek Anda.
+                PT Khincai Favorit Group menyediakan layanan kontraktor, leveransir, supplay, land clearing, dan real estate untuk memenuhi setiap kebutuhan bisnis Anda.
               </p>
             </motion.div>
           </div>
         </div>
         <div className="page-hero__divider" />
         <div className="page-hero__right">
-          <div className="page-hero__est">8</div>
-          <div className="page-hero__est-label">Layanan Tersedia</div>
+          <div className="page-hero__est">5</div>
+          <div className="page-hero__est-label">Layanan Utama</div>
         </div>
       </section>
 

@@ -15,7 +15,7 @@
   gap: 2.5rem;
   align-items: start;
   padding: 3rem 0;
-  border-bottom: 1px solid var(--stone-200);
+  border-bottom: 1px solid var(--gray-200);
 }
 
 .service-row:last-child { border-bottom: none; }
@@ -31,7 +31,7 @@
 .service-row__num {
   font-family: var(--font-display);
   font-size: 4rem;
-  color: var(--stone-200);
+  color: var(--gray-200);
   line-height: 1;
   user-select: none;
   padding-top: 0.25rem;
@@ -40,7 +40,7 @@
 .service-row__icon {
   width: 72px;
   height: 72px;
-  background: var(--red-700);
+  background: var(--red-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +51,7 @@
 .service-row__body h2 {
   font-family: var(--font-display);
   font-size: 1.75rem;
-  color: var(--stone-950);
+  color: var(--gray-900);
   margin-bottom: 0.875rem;
   font-weight: 400;
   line-height: 1.2;
@@ -60,7 +60,7 @@
 .service-row__body p {
   font-size: 0.9375rem;
   line-height: 1.75;
-  color: var(--stone-800);
+  color: var(--gray-700);
   margin-bottom: 1.25rem;
 }
 
@@ -74,10 +74,10 @@
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.06em;
-  color: var(--stone-950);
-  background: var(--stone-100);
+  color: var(--gray-900);
+  background: var(--gray-100);
   padding: 0.35rem 0.85rem;
-  border: 1px solid var(--stone-200);
+  border: 1px solid var(--gray-200);
 }
 
 @media (max-width: 768px) {
@@ -95,7 +95,7 @@
 /* ── Process Section ── */
 .process-section {
   padding: var(--section-py) 0;
-  background: var(--stone-100);
+  background: var(--gray-100);
 }
 
 .process-header {
@@ -107,7 +107,7 @@
   font-family: var(--font-display);
   font-size: clamp(2rem, 3.5vw, 2.75rem);
   line-height: 1.15;
-  color: var(--stone-950);
+  color: var(--gray-900);
 }
 
 .process-grid {
@@ -128,7 +128,7 @@
   position: absolute;
   top: 1.25rem;
   right: -0.75rem;
-  color: var(--stone-200);
+  color: var(--gray-200);
   font-size: 1.25rem;
   transform: translateY(-50%);
 }
@@ -137,7 +137,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: var(--red-700);
+  background: var(--red-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,7 +151,7 @@
 .process-step h3 {
   font-family: var(--font-display);
   font-size: 1rem;
-  color: var(--stone-950);
+  color: var(--gray-900);
   margin-bottom: 0.5rem;
   font-weight: 400;
 }
@@ -159,7 +159,7 @@
 .process-step p {
   font-size: 0.8125rem;
   line-height: 1.65;
-  color: var(--stone-800);
+  color: var(--gray-700);
 }
 
 @media (max-width: 1024px) {
@@ -179,7 +179,7 @@
 
 /* ── Services CTA ── */
 .services-cta {
-  background: var(--stone-950);
+  background: var(--gray-900);
   padding: var(--section-py) 0;
 }
 
@@ -191,7 +191,7 @@
   flex-wrap: wrap;
 }
 
-.services-cta__text .section-label { color: var(--red-700); }
+.services-cta__text .section-label { color: var(--red-primary); }
 
 .services-cta__text h2 {
   font-family: var(--font-display);
@@ -203,7 +203,7 @@
 .services-cta__text p {
   font-size: 1rem;
   line-height: 1.75;
-  color: var(--stone-800);
+  color: var(--gray-200);
   margin-top: 1rem;
   max-width: 480px;
 }
@@ -218,6 +218,6 @@
 
 .services-cta__note {
   font-size: 0.8125rem;
-  color: var(--stone-800);
+  color: var(--gray-200);
   font-style: italic;
 }
