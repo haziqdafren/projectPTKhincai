@@ -59,7 +59,7 @@ export default function Footer() {
             <div className="footer__col-title">Kontak</div>
             <div className="footer__contact-item">
               <span className="footer__contact-label">Alamat</span>
-              <span className="footer__contact-value">Jl. Placeholder No. 1, Jakarta, Indonesia</span>
+              <span className="footer__contact-value">Jl.Azki Aris Gg.Lembayung Tugu 5</span>
             </div>
             <div className="footer__contact-item">
               <span className="footer__contact-label">Telepon</span>
