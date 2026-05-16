@@ -11,7 +11,7 @@ const fadeUp = {
 };
 
 const WHATSAPP_NUMBER = '6282286312746';
-const OFFICE_ADDRESS = 'Jl.Azki Aris Gg.Lembayung Tugu 5, Medan, Indonesia';
+const OFFICE_ADDRESS = 'Jl.Azki Aris Gg.Lembayung Tugu 5';
 
 const inquiryTypes = [
   { value: 'general', label: 'Pertanyaan Umum', message: 'Halo, saya ingin menanyakan informasi umum tentang PT Khincai Favorit Group.' },
