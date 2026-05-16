@@ -1,16 +1,57 @@
-# React + Vite
+# PT Khincai Favorit Group - Company Profile Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Official website for **PT Khincai Favorit Group**, a professional company providing integrated business solutions in Indonesia.
 
-Currently, two official plugins are available:
+## About PT Khincai Favorit Group
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**PT. KHINCAI FAVORIT GROUP** is a trusted business partner offering comprehensive solutions across multiple sectors:
 
-## React Compiler
+- **Kontraktor** - Professional contractor services for construction and development projects
+- **Leveransir** - Supply of goods and materials to support project delivery
+- **Supplay** - Supply services for construction materials and equipment  
+- **Land Clearing** - Land preparation and site clearing for construction and property development
+- **Real Estate** - Property development and real estate solutions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Company Details
 
-## Expanding the ESLint configuration
+- **Founded:** 2025
+- **Legal Status:** Registered with NIB (Nomor Induk Berusaha)
+- **Location:** Jl. Azki Aris Gg. Lembayung Tugu 5, Medan, Indonesia
+- **Phone:** +62 822-8631-2746 (WhatsApp)
+- **Email:** ptkhincaifavoritgroup@gmail.com
+- **Target Markets:** Government (BUMN), Private Sector, Individuals
+- **Specialization:** Government tenders (APBN/APBD) and strategic business partnerships
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Website Features
+
+- **Professional Company Profile** - Comprehensive information about our services and expertise
+- **Portfolio Showcase** - Documentation of completed projects including the Full Package Plantation Development at PT Sumatera Riang Lestari Estate Bayas
+- **Contact Integration** - Direct WhatsApp messaging and multiple contact channels
+- **SEO Optimized** - Fully optimized for search engines with proper meta tags and social media sharing
+- **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
+- **Bahasa Indonesia** - Complete Indonesian language interface
+
+## Design Philosophy
+
+- **Corporate & Elegant** - Professional appearance suitable for government tenders and business partnerships
+- **Industrial Aesthetic** - Modern design reflecting construction industry expertise
+- **User-Centric** - Easy navigation and clear information architecture
+
+## Pages
+
+- **Beranda (Home)** - Company overview and key services
+- **Tentang Kami (About)** - Company history, vision, mission, and certifications
+- **Layanan (Services)** - Detailed information about all 5 core business services
+- **Portfolio** - Project showcase and case studies
+- **Kontak (Contact)** - Contact form with WhatsApp integration and location details
+
+## Technology Stack
+
+- React + Vite
+- React Router for navigation
+- Framer Motion for animations
+- Lucide React for icons
+
+## Live Website
+
+Visit us at: **https://khincai-web.vercel.app**
