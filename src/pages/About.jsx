@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Target, Eye, CheckCircle2, Award, Users, Clock, X } from 'lucide-react';
+import { ArrowRight, Target, Award, Users, Clock, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import './About.css';
 
@@ -74,32 +74,6 @@ export default function About() {
         <div className="page-hero__right">
           <div className="page-hero__est">2025</div>
           <div className="page-hero__est-label">Tahun Berdiri</div>
-        </div>
-      </section>
-
-      {/* ── VISION & MISSION ── */}
-      <section className="vm-section">
-        <div className="container">
-          <motion.div className="vm-section__inner" {...fadeUp}>
-            <div className="vm-card vm-card--vision">
-              <div className="vm-card__label"><Eye size={14} /> Visi</div>
-              <h2>Menjadi kontraktor konstruksi terkemuka yang dipercaya pemerintah dan swasta dalam mewujudkan pembangunan Indonesia yang berkelanjutan.</h2>
-            </div>
-            <div className="vm-card vm-card--mission">
-              <div className="vm-card__label"><Target size={14} /> Misi</div>
-              <ul>
-                {[
-                  'Mengerjakan setiap proyek dengan standar kualitas dan keselamatan tertinggi',
-                  'Membangun kemitraan jangka panjang dengan instansi pemerintah',
-                  'Mengembangkan sumber daya manusia yang kompeten dan profesional',
-                  'Menerapkan teknologi dan inovasi terkini dalam setiap pekerjaan konstruksi',
-                  'Berkontribusi nyata terhadap pembangunan daerah dan nasional',
-                ].map((item, i) => (
-                  <li key={i}><CheckCircle2 size={14} /><span>{item}</span></li>
-                ))}
-              </ul>
-            </div>
-          </motion.div>
         </div>
       </section>
 

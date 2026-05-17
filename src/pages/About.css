@@ -102,83 +102,10 @@
   .page-hero__left-inner { margin-left: 0; padding-right: 0; max-width: 100%; }
 }
 
-/* ── Vision & Mission ── */
-.vm-section {
-  padding: var(--section-py) 0;
-  background: var(--gray-100);
-}
-
-.vm-section__inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
-
-.vm-card {
-  padding: 3rem;
-}
-
-.vm-card--vision {
-  background: var(--gray-900);
-}
-
-.vm-card--mission {
-  background: var(--white);
-  border: 1px solid var(--gray-200);
-}
-
-.vm-card__label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-body);
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--red-primary);
-  margin-bottom: 1.5rem;
-}
-
-.vm-card--vision h2 {
-  font-family: var(--font-display);
-  font-size: 1.625rem;
-  line-height: 1.4;
-  color: var(--white);
-  font-weight: 400;
-  font-style: italic;
-}
-
-.vm-card--mission ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.875rem;
-}
-
-.vm-card--mission li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  color: var(--gray-700);
-}
-
-.vm-card--mission li svg {
-  color: var(--red-primary);
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-@media (max-width: 768px) {
-  .vm-section__inner { grid-template-columns: 1fr; gap: 1.5rem; }
-  .vm-card { padding: 2rem; }
-}
-
 /* ── Values ── */
 .values-section {
   padding: var(--section-py) 0;
+  border-top: 1px solid var(--gray-200);
 }
 
 .values-header {
