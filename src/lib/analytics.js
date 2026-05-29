@@ -1,4 +1,4 @@
-const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
+const GA_MEASUREMENT_ID = (import.meta.env.VITE_GA_MEASUREMENT_ID || '').trim();
 
 let initialized = false;
 
@@ -6,7 +6,7 @@ export function initAnalytics() {
   if (!GA_MEASUREMENT_ID || initialized || typeof window === 'undefined') return;
 
   const scriptSrc = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
-  const existingScript = document.querySelector('script[src="' + scriptSrc + '"]');
+  const existingScript = Array.from(document.scripts).find((script) => script.src === scriptSrc);
   if (!existingScript) {
     const script = document.createElement('script');
     script.async = true;
