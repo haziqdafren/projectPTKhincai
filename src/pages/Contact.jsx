@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail } from 'lucide-react';
 import { useState } from 'react';
 import './Contact.css';
+import { trackEvent } from '../lib/analytics';
 
 const fadeUp = {
   initial: { opacity: 0, y: 40 },
@@ -13,7 +14,7 @@ const fadeUp = {
 const WHATSAPP_NUMBER = '6282286312746';
 const PHONE_DISPLAY = '+62 822-8631-2746';
 const CONTACT_EMAIL = 'ptkhincaifavoritgroup@gmail.com';
-const OFFICE_ADDRESS = 'Jl. Azki Aris Gg. Lembayung Tugu 5, Medan';
+const OFFICE_ADDRESS = 'Jalan Azki Aris Ujung Gang Lembayung, Desa/Kelurahan Kampung Dagang, Kec. Rengat, Kab. Indragiri Hulu, Provinsi Riau';
 const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(OFFICE_ADDRESS)}`;
 const MAPS_EMBED_URL = `https://www.google.com/maps?q=${encodeURIComponent(OFFICE_ADDRESS)}&output=embed`;
 
@@ -33,6 +34,10 @@ export default function Contact() {
 
   const handleWhatsAppClick = () => {
     const inquiryMsg = inquiryTypes.find(t => t.value === selectedInquiry)?.message || '';
+    trackEvent('generate_lead', {
+      contact_method: 'whatsapp',
+      inquiry_type: selectedInquiry,
+    });
     const details = [
       inquiryMsg,
       '',
@@ -82,7 +87,7 @@ export default function Contact() {
                 <div>
                   <span className="contact-info-card__label">Alamat Kantor</span>
                   <span className="contact-info-card__value">
-                    <a href={MAPS_URL} target="_blank" rel="noopener noreferrer">{OFFICE_ADDRESS}</a>
+                    <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('contact_click', { contact_method: 'maps', location: 'address_card' })}>{OFFICE_ADDRESS}</a>
                   </span>
                 </div>
               </div>
@@ -91,7 +96,7 @@ export default function Contact() {
                 <div>
                   <span className="contact-info-card__label">Nomor Telepon</span>
                   <span className="contact-info-card__value">
-                    <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer">
+                    <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('contact_click', { contact_method: 'whatsapp', location: 'contact_card' })}>
                       {PHONE_DISPLAY}
                     </a>
                   </span>
@@ -102,7 +107,7 @@ export default function Contact() {
                 <div>
                   <span className="contact-info-card__label">Email</span>
                   <span className="contact-info-card__value">
-                    <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+                    <a href={`mailto:${CONTACT_EMAIL}`} onClick={() => trackEvent('contact_click', { contact_method: 'email', location: 'contact_card' })}>{CONTACT_EMAIL}</a>
                   </span>
                 </div>
               </div>
@@ -111,7 +116,7 @@ export default function Contact() {
             <div className="contact-map-placeholder">
               <div className="contact-map-placeholder__header">
                 <span>Lokasi Kami</span>
-                <a href={MAPS_URL} target="_blank" rel="noopener noreferrer">Buka Google Maps</a>
+                <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('contact_click', { contact_method: 'maps', location: 'map_header' })}>Buka Google Maps</a>
               </div>
               <iframe
                 title="Lokasi PT Khincai Favorit Group di Google Maps"

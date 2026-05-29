@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Footer.css';
+import { trackEvent } from '../lib/analytics';
 
 const navLinks = [
   { label: 'Beranda', path: '/' },
@@ -68,18 +69,18 @@ export default function Footer() {
             <div className="footer__col-title">Kontak</div>
             <div className="footer__contact-item">
               <span className="footer__contact-label">Alamat</span>
-              <span className="footer__contact-value">Jl.Azki Aris Gg.Lembayung Tugu 5</span>
+              <span className="footer__contact-value">Jalan Azki Aris Ujung Gang Lembayung, Desa/Kelurahan Kampung Dagang, Kec. Rengat, Kab. Indragiri Hulu, Provinsi Riau</span>
             </div>
             <div className="footer__contact-item">
               <span className="footer__contact-label">Telepon</span>
               <span className="footer__contact-value">
-                <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer">{PHONE_DISPLAY}</a>
+                <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('contact_click', { contact_method: 'whatsapp', location: 'footer' })}>{PHONE_DISPLAY}</a>
               </span>
             </div>
             <div className="footer__contact-item">
               <span className="footer__contact-label">Email</span>
               <span className="footer__contact-value">
-                <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+                <a href={`mailto:${CONTACT_EMAIL}`} onClick={() => trackEvent('contact_click', { contact_method: 'email', location: 'footer' })}>{CONTACT_EMAIL}</a>
               </span>
             </div>
           </div>

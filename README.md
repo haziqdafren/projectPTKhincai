@@ -16,7 +16,7 @@ Official website for **PT Khincai Favorit Group**, a professional company provid
 
 - **Founded:** 2025
 - **Legal Status:** Registered with NIB (Nomor Induk Berusaha)
-- **Location:** Jl. Azki Aris Gg. Lembayung Tugu 5, Medan, Indonesia
+- **Location:** Jalan Azki Aris Ujung Gang Lembayung, Desa/Kelurahan Kampung Dagang, Kec. Rengat, Kab. Indragiri Hulu, Provinsi Riau
 - **Phone:** +62 822-8631-2746 (WhatsApp)
 - **Email:** ptkhincaifavoritgroup@gmail.com
 - **Target Markets:** Government (BUMN), Private Sector, Individuals
@@ -51,6 +51,25 @@ Official website for **PT Khincai Favorit Group**, a professional company provid
 - React Router for navigation
 - Framer Motion for animations
 - Lucide React for icons
+
+
+## Google Analytics
+
+This site supports Google Analytics 4 through the Vite environment variable:
+
+```env
+VITE_GA_MEASUREMENT_ID=G-RTEBTQDEW7
+```
+
+Setup steps:
+
+1. Create a free GA4 property in Google Analytics.
+2. Add a Web data stream for the production domain.
+3. Copy the Measurement ID that starts with `G-`.
+4. Add `VITE_GA_MEASUREMENT_ID` in Vercel Project Settings > Environment Variables.
+5. Redeploy the site.
+
+The implementation tracks page views for React Router navigation, contact link clicks, and WhatsApp lead submissions.
 
 ## Live Website
 

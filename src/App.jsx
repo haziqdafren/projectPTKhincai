@@ -7,10 +7,17 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
+import { initAnalytics, trackPageView } from './lib/analytics';
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
-  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  const { pathname, search } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    initAnalytics();
+    trackPageView(`${pathname}${search}`);
+  }, [pathname, search]);
+
   return null;
 }
 
