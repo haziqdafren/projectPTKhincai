@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2, Award, Users, Building2, Hammer, Landmark, HardHat, Shield, TrendingUp } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Award, Users, Building2, Hammer, Landmark, HardHat, Shield } from 'lucide-react';
 import './Home.css';
 
 const fadeUp = {
@@ -34,7 +34,11 @@ const whyUs = [
   'Transparansi dan akuntabilitas dalam setiap transaksi',
 ];
 
-const certs = ['SIUJK Nasional', 'ISO 9001:2015', 'Standar K3', 'LPJK Terverifikasi', 'e-Katalog LKPP', 'BUMN Partner'];
+const trustPoints = [
+  'NIB Terdaftar',
+  'Dokumen Legal',
+  'Pengalaman Proyek Plantation',
+];
 
 export default function Home() {
   return (
@@ -192,7 +196,7 @@ export default function Home() {
       <section className="trust-bar">
         <div className="container trust-bar__inner">
           <motion.div {...fadeUp}>
-            <span className="section-label" style={{ color: 'var(--red-700)' }}>Mengapa Kami</span>
+            <span className="section-label" style={{ color: 'var(--red-primary)' }}>Mengapa Kami</span>
             <h2 className="trust-bar__heading">
               Mitra Strategis untuk<br />Tender Pemerintah
             </h2>
@@ -205,13 +209,13 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            className="trust-bar__certs"
+            className="trust-bar__points"
             {...fadeUp}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
           >
-            {certs.map((c, i) => (
-              <div key={i} className="trust-cert">
-                <div className="trust-cert__dot" />
+            {trustPoints.map((c, i) => (
+              <div key={i} className="trust-point">
+                <div className="trust-point__dot" />
                 <span>{c}</span>
               </div>
             ))}

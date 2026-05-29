@@ -22,9 +22,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  useEffect(() => {
-    setDrawerOpen(false);
-  }, [location]);
 
   useEffect(() => {
     document.body.style.overflow = drawerOpen ? 'hidden' : '';
@@ -82,11 +79,13 @@ export default function Navbar() {
             key={link.path}
             to={link.path}
             className={`navbar__drawer-link${location.pathname === link.path ? ' active' : ''}`}
+            onClick={() => setDrawerOpen(false)}
           >
             {link.label}
           </Link>
         ))}
-        <Link to="/kontak" className="btn-primary navbar__drawer-cta">
+        <Link to="/kontak" className="btn-primary navbar__drawer-cta"
+          onClick={() => setDrawerOpen(false)}>
           Hubungi Kami
         </Link>
       </div>

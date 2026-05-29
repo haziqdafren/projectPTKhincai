@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Building2, Hammer, Landmark, HardHat, Shield, TrendingUp, Wrench, ClipboardList } from 'lucide-react';
+import { ArrowRight, Building2, Hammer, Landmark, HardHat, Shield } from 'lucide-react';
 import './Services.css';
 import './About.css';
 

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 import { useState } from 'react';
 import './Contact.css';
 
@@ -11,7 +11,11 @@ const fadeUp = {
 };
 
 const WHATSAPP_NUMBER = '6282286312746';
-const OFFICE_ADDRESS = 'Jl.Azki Aris Gg.Lembayung Tugu 5';
+const PHONE_DISPLAY = '+62 822-8631-2746';
+const CONTACT_EMAIL = 'ptkhincaifavoritgroup@gmail.com';
+const OFFICE_ADDRESS = 'Jl. Azki Aris Gg. Lembayung Tugu 5, Medan';
+const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(OFFICE_ADDRESS)}`;
+const MAPS_EMBED_URL = `https://www.google.com/maps?q=${encodeURIComponent(OFFICE_ADDRESS)}&output=embed`;
 
 const inquiryTypes = [
   { value: 'general', label: 'Pertanyaan Umum', message: 'Halo, saya ingin menanyakan informasi umum tentang PT Khincai Favorit Group.' },
@@ -29,8 +33,15 @@ export default function Contact() {
 
   const handleWhatsAppClick = () => {
     const inquiryMsg = inquiryTypes.find(t => t.value === selectedInquiry)?.message || '';
-    const fullMessage = `${inquiryMsg}\n\nNama: ${formData.nama || '[Nama Anda]'}\nPerusahaan: ${formData.perusahaan || '[Perusahaan]'}\nNo. Telepon: ${formData.telepon || '[No. Telepon]'}`;
-    const encodedMsg = encodeURIComponent(fullMessage);
+    const details = [
+      inquiryMsg,
+      '',
+      `Nama: ${formData.nama || '[Nama Anda]'}`,
+      `Perusahaan: ${formData.perusahaan || '[Perusahaan]'}`,
+      `No. Telepon: ${formData.telepon || '[No. Telepon]'}`,
+      `Pesan Tambahan: ${formData.pesan || '-'}`,
+    ];
+    const encodedMsg = encodeURIComponent(details.join('\n'));
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMsg}`, '_blank');
   };
 
@@ -70,7 +81,9 @@ export default function Contact() {
                 <div className="contact-info-card__icon"><MapPin size={20} /></div>
                 <div>
                   <span className="contact-info-card__label">Alamat Kantor</span>
-                  <span className="contact-info-card__value">{OFFICE_ADDRESS}</span>
+                  <span className="contact-info-card__value">
+                    <a href={MAPS_URL} target="_blank" rel="noopener noreferrer">{OFFICE_ADDRESS}</a>
+                  </span>
                 </div>
               </div>
               <div className="contact-info-card">
@@ -78,8 +91,8 @@ export default function Contact() {
                 <div>
                   <span className="contact-info-card__label">Nomor Telepon</span>
                   <span className="contact-info-card__value">
-                    <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                      +62 822-8631-2746
+                    <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer">
+                      {PHONE_DISPLAY}
                     </a>
                   </span>
                 </div>
@@ -88,22 +101,27 @@ export default function Contact() {
                 <div className="contact-info-card__icon"><Mail size={20} /></div>
                 <div>
                   <span className="contact-info-card__label">Email</span>
-                  <span className="contact-info-card__value">ptkhincaifavoritgroup@gmail.com</span>
+                  <span className="contact-info-card__value">
+                    <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+                  </span>
                 </div>
               </div>
             </div>
 
             <div className="contact-map-placeholder">
-              <span>Lokasi Kami</span>
+              <div className="contact-map-placeholder__header">
+                <span>Lokasi Kami</span>
+                <a href={MAPS_URL} target="_blank" rel="noopener noreferrer">Buka Google Maps</a>
+              </div>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.5892897445887!2d98.6661!3d3.1949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30313155555555%3A0x555555555555!2sJl.Azki%20Aris%20Gg.Lembayung%20Tugu%205%2C%20Medan!5e0!3m2!1sid!2sid!4v1234567890"
+                title="Lokasi PT Khincai Favorit Group di Google Maps"
+                src={MAPS_EMBED_URL}
                 width="100%"
-                height="300"
-                style={{ border: 0, borderRadius: '8px', marginTop: '1rem' }}
+                height="320"
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+              />
             </div>
           </motion.div>
 

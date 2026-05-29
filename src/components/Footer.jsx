@@ -15,7 +15,16 @@ const serviceLinks = [
   'Renovasi & Rehabilitasi',
 ];
 
-const certs = ['SIUJK Nasional', 'ISO 9001:2015', 'K3', 'LPJK'];
+const trustPoints = [
+  'NIB Terdaftar',
+  'Dokumen Legal',
+  'Pengalaman Proyek Plantation',
+];
+
+const WHATSAPP_NUMBER = '6282286312746';
+const PHONE_DISPLAY = '+62 822-8631-2746';
+const CONTACT_EMAIL = 'ptkhincaifavoritgroup@gmail.com';
+
 
 export default function Footer() {
   return (
@@ -63,11 +72,15 @@ export default function Footer() {
             </div>
             <div className="footer__contact-item">
               <span className="footer__contact-label">Telepon</span>
-              <span className="footer__contact-value">+62 21 000 0000</span>
+              <span className="footer__contact-value">
+                <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer">{PHONE_DISPLAY}</a>
+              </span>
             </div>
             <div className="footer__contact-item">
               <span className="footer__contact-label">Email</span>
-              <span className="footer__contact-value">ptkhincaifavoritgroup@gmail.com</span>
+              <span className="footer__contact-value">
+                <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+              </span>
             </div>
           </div>
         </div>
@@ -77,11 +90,11 @@ export default function Footer() {
           <span className="footer__copy">
             © {new Date().getFullYear()} PT Khincai Favorit Group. Hak cipta dilindungi.
           </span>
-          <div className="footer__certs">
-            {certs.map((c) => (
-              <div key={c} className="footer__cert">
-                <div className="footer__cert-dot" />
-                <span>{c}</span>
+          <div className="footer__trust-points">
+            {trustPoints.map((point) => (
+              <div key={point} className="footer__trust-point">
+                <div className="footer__trust-dot" />
+                <span>{point}</span>
               </div>
             ))}
           </div>

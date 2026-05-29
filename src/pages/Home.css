@@ -416,13 +416,13 @@
   margin-bottom: 2rem;
 }
 
-.trust-bar__certs {
+.trust-bar__points {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.75rem;
 }
 
-.trust-cert {
+.trust-point {
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -431,7 +431,7 @@
   border-radius: 4px;
 }
 
-.trust-cert__dot {
+.trust-point__dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -439,7 +439,7 @@
   flex-shrink: 0;
 }
 
-.trust-cert span {
+.trust-point span {
   font-size: 0.8125rem;
   font-weight: 500;
   color: var(--gray-200);
@@ -447,7 +447,7 @@
 
 @media (max-width: 768px) {
   .trust-bar__inner { grid-template-columns: 1fr; gap: 3rem; }
-  .trust-bar__certs { grid-template-columns: 1fr; }
+  .trust-bar__points { grid-template-columns: 1fr; }
 }
 
 /* ── CTA Banner ── */
