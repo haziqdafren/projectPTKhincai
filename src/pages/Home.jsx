@@ -66,7 +66,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.25 }}
             >
-              PT Khincai Favorit Group menyediakan layanan lengkap meliputi kontraktor, leveransir, supplay, land clearing, dan real estate untuk memenuhi kebutuhan bisnis Anda.
+              PT Khincai Favorit Group, dikenal juga sebagai Khincai Group, menyediakan layanan kontraktor, leveransir, supplay, land clearing, dan real estate untuk kebutuhan proyek di Riau dan Indonesia.
             </motion.p>
             <motion.div
               className="hero__actions"
@@ -123,7 +123,7 @@ export default function Home() {
               Mitra Bisnis<br /><em>Terpercaya</em> Untuk Semua
             </h2>
             <p className="about-strip__body">
-              PT Khincai Favorit Group adalah perusahaan profesional yang menyediakan layanan kontraktor, leveransir, supplay, land clearing, dan real estate. Kami berkomitmen untuk memberikan solusi bisnis berkualitas dengan standar profesional tertinggi.
+              PT Khincai Favorit Group adalah perusahaan profesional di Rengat, Riau, yang bergerak dalam layanan kontraktor, leveransir, supplay material, land clearing, dan real estate. Nama Khincai Group digunakan sebagai identitas singkat perusahaan dalam komunikasi digital dan pencarian online.
             </p>
             <ul className="about-strip__list">
               {whyUs.map((item, i) => (

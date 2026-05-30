@@ -36,7 +36,7 @@ export default function Footer() {
           <div className="footer__brand">
             <img src="/logo.jpeg" alt="Khincai Favorit Group" className="footer__logo-image" />
             <p className="footer__tagline">
-              Mitra terpercaya pemerintah dalam mewujudkan proyek konstruksi berkualitas di seluruh nusantara.
+              PT Khincai Favorit Group atau Khincai Group adalah mitra konstruksi, land clearing, leveransir, dan real estate di Riau dan Indonesia.
             </p>
           </div>
 
